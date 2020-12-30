@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>ui_img/报警警报预警.png</file>
+        <file>ui_img/电话.png</file>
+        <file>ui_img/关于app.png</file>
+        <file>ui_img/简约渐变风背景素材.jpg</file>
+        <file>ui_img/开关.png</file>
+        <file>ui_img/开关打开.png</file>
+        <file>ui_img/设置.png</file>
+        <file>ui_img/湿度.png</file>
+        <file>ui_img/手机2.png</file>
+        <file>ui_img/手机 (1).png</file>
+        <file>ui_img/温度.png</file>
+        <file>ui_img/温度计.png</file>
+        <file>ui_img/温湿度.png</file>
+        <file>ui_img/预览图_千图网_编号11012887.png</file>
+        <file>ui_img/b.jpg</file>
+        <file>ui_img/begroud.jpg</file>
+        <file>ui_img/bg.jpg</file>
+        <file>ui_img/bg1.jpg</file>
+        <file>ui_img/bg2.jpg</file>
+        <file>ui_img/huabanfuben.png</file>
+        <file>ui_img/login.jpg</file>
+        <file>ui_img/mainui.jpg</file>
+        <file>ui_img/NFC-.png</file>
+        <file>ui_img/NFC- (2).png</file>
+        <file>ui_img/phone.png</file>
+        <file>ui_img/phone1.png</file>
+        <file>ui_img/thermometer.png</file>
+        <file>ui_img/true.jpg</file>
+        <file>ui_img/weibiaoti24.png</file>
+    </qresource>
+</RCC>
