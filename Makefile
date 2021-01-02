@@ -14,10 +14,10 @@ EQ            = =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I../../Qt5.14.2/5.14.2/gcc_64/include -I../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I../../Qt5.14.2/5.14.2/gcc_64/include/QtGui -I../../Qt5.14.2/5.14.2/gcc_64/include/QtSql -I../../Qt5.14.2/5.14.2/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -I../../Qt5.14.2/5.14.2/gcc_64/include -I../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia -I../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I../../Qt5.14.2/5.14.2/gcc_64/include/QtGui -I../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork -I../../Qt5.14.2/5.14.2/gcc_64/include/QtSql -I../../Qt5.14.2/5.14.2/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -40,7 +40,7 @@ DISTNAME      = Air_quality1.0.0
 DISTDIR = /home/xuhahn/QTpro/Air_quality/.tmp/Air_quality1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib
-LIBS          = $(SUBLIBS) /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Sql.so /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so -lGL -lpthread   
+LIBS          = $(SUBLIBS) /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Multimedia.so /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Network.so /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Sql.so /home/xuhahn/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so -lGL -lpthread   
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -813,7 +813,7 @@ moc_loginform.cpp: loginform.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qdialog.h \
 		moc_predefs.h \
 		../../Qt5.14.2/5.14.2/gcc_64/bin/moc
-	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include loginform.h -o moc_loginform.cpp
+	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtNetwork -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include loginform.h -o moc_loginform.cpp
 
 moc_mainwindow.cpp: mainwindow.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QMainWindow \
@@ -925,7 +925,7 @@ moc_mainwindow.cpp: mainwindow.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qicon.h \
 		moc_predefs.h \
 		../../Qt5.14.2/5.14.2/gcc_64/bin/moc
-	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtNetwork -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 moc_modify_phone_numberdialog.cpp: modify_phone_numberdialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QDialog \
@@ -1035,7 +1035,7 @@ moc_modify_phone_numberdialog.cpp: modify_phone_numberdialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtouchdevice.h \
 		moc_predefs.h \
 		../../Qt5.14.2/5.14.2/gcc_64/bin/moc
-	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include modify_phone_numberdialog.h -o moc_modify_phone_numberdialog.cpp
+	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtNetwork -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include modify_phone_numberdialog.h -o moc_modify_phone_numberdialog.cpp
 
 moc_phoneform.cpp: phoneform.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QWidget \
@@ -1144,7 +1144,7 @@ moc_phoneform.cpp: phoneform.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtouchdevice.h \
 		moc_predefs.h \
 		../../Qt5.14.2/5.14.2/gcc_64/bin/moc
-	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include phoneform.h -o moc_phoneform.cpp
+	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtNetwork -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include phoneform.h -o moc_phoneform.cpp
 
 moc_settingdialog.cpp: settingdialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QDialog \
@@ -1252,9 +1252,39 @@ moc_settingdialog.cpp: settingdialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qfiledevice.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qvector2d.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtouchdevice.h \
+		conf.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QFile \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QFileDevice \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QtDebug \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/QSqlDatabase \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qsqldatabase.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qtsqlglobal.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qtsql-config.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/QSqlQuery \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qsqlquery.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QSharedDataPointer \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QUrl \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QVariant \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmetaobject.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qaudio.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/QMediaContent \
 		moc_predefs.h \
 		../../Qt5.14.2/5.14.2/gcc_64/bin/moc
-	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include settingdialog.h -o moc_settingdialog.cpp
+	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtNetwork -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include settingdialog.h -o moc_settingdialog.cpp
 
 moc_thresholddialog.cpp: thresholddialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QDialog \
@@ -1368,7 +1398,7 @@ moc_thresholddialog.cpp: thresholddialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qtsql-config.h \
 		moc_predefs.h \
 		../../Qt5.14.2/5.14.2/gcc_64/bin/moc
-	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include thresholddialog.h -o moc_thresholddialog.cpp
+	/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/bin/moc $(DEFINES) --include /home/xuhahn/QTpro/Air_quality/moc_predefs.h -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/mkspecs/linux-g++ -I/home/xuhahn/QTpro/Air_quality -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtGui -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtNetwork -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtSql -I/home/xuhahn/Qt5.14.2/5.14.2/gcc_64/include/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include thresholddialog.h -o moc_thresholddialog.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1939,15 +1969,39 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		settingdialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QDialog \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qdialog.h \
-		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QUrl \
-		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/QDesktopServices \
-		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qdesktopservices.h \
-		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstandardpaths.h \
-		thresholddialog.h \
+		conf.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QFile \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QFileDevice \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QtDebug \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/QSqlDatabase \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qsqldatabase.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qtsqlglobal.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qtsql-config.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/QSqlQuery \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qsqlquery.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QSharedDataPointer \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QUrl \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmetaobject.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qaudio.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/QMediaContent \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/QDesktopServices \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qdesktopservices.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstandardpaths.h \
+		thresholddialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QDebug \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWebView/QtWebView \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWebView/QtWebViewDepends \
@@ -2020,7 +2074,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qloggingcategory.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmath.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmessageauthenticationcode.h \
-		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmetaobject.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmimedata.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmimedatabase.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmimetype.h \
@@ -2129,7 +2182,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qopenglframebufferobject.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qopenglpaintdevice.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qopenglpixeltransferoptions.h \
-		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QSharedDataPointer \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qopenglshaderprogram.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qopengltexture.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qopengltextureblitter.h \
@@ -2559,8 +2611,37 @@ settingdialog.o: settingdialog.cpp settingdialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qfiledevice.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qvector2d.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_settingdialog.h \
+		conf.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QFile \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QFileDevice \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QtDebug \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/QSqlDatabase \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qsqldatabase.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qtsqlglobal.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qtsql-config.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/QSqlQuery \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qsqlquery.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QSharedDataPointer \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QUrl \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QVariant \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmetaobject.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/qaudio.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia/QMediaContent \
+		ui_settingdialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QApplication \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qapplication.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcoreapplication.h \
@@ -2708,7 +2789,15 @@ thresholddialog.o: thresholddialog.cpp thresholddialog.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QSlider \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qslider.h \
 		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QtDebug
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QtDebug \
+		conf.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QFile \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtCore/QFileDevice \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/QSqlQuery \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtSql/qsqlquery.h \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QMessageBox \
+		../../Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o thresholddialog.o thresholddialog.cpp
 
 moc_loginform.o: moc_loginform.cpp 

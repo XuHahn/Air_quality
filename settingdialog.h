@@ -3,12 +3,15 @@
 
 #include <QDialog>
 #include "conf.h"
+#include <QtMultimedia/QMediaPlayer>
+#include <QtMultimedia/QMediaContent>
 namespace Ui {
 class SettingDialog;
 }
 
 class SettingDialog : public QDialog
 {
+    QMediaPlayer player;
     Q_OBJECT
 public:
     explicit SettingDialog(QWidget *parent = nullptr);
